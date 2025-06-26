@@ -121,8 +121,8 @@ int main(void)
   HAL_ADCEx_Calibration_Start(&hadc1);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t*)values, sizeof(values)/sizeof(uint16_t));
 
-  float NTC_R = 0.0;
-  float temperature = 0.0;
+//  float NTC_R = 0.0;
+//  float temperature = 0.0;
 
   float Vref = 0.0;
   float voltage = 0.0;

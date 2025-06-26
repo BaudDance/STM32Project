@@ -69,7 +69,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 				for (int i = 0; i < Size - 1; i++){
 					sum += receiveData[i];
 				}
-
 				if (sum == receiveData[Size - 1]){
 					for (int i = 2; i < Size - 1; i += 2){
 						 GPIO_PinState state = GPIO_PIN_SET;
@@ -87,7 +86,6 @@ void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size){
 				}
 			}
 		}
-
 		HAL_UARTEx_ReceiveToIdle_DMA(&huart3, receiveData, sizeof(receiveData));
 		__HAL_DMA_DISABLE_IT(&hdma_usart3_rx,DMA_IT_HT);
 	}
